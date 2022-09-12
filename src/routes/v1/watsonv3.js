@@ -15,12 +15,12 @@ const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
 
 router.post("/", async (req, res) => {
 	const analyzeParams = {
-		url: req.body.url,
 		features: {
 			concepts: {
-				limit: 1,
+				limit: 3,
 			},
 		},
+		text: req.body.text,
 	};
 
 	naturalLanguageUnderstanding
@@ -31,7 +31,7 @@ router.post("/", async (req, res) => {
 			);
 		})
 		.catch((err) => {
-			res.send(err);
+			console.log("error:", err);
 		});
 });
 

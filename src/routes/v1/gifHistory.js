@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 		`);
 		await con.end();
 		if (data[0].url === req.body.url) {
-			return res.send("same");
+			return res.send(err);
 		}
 	} catch (err) {
 		return res.status(400).send(err);

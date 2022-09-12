@@ -15,23 +15,27 @@ const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
 
 router.post("/", async (req, res) => {
 	const analyzeParams = {
-		url: req.body.url,
 		features: {
-			concepts: {
-				limit: 1,
+			categories: {
+				limit: 3,
 			},
 		},
+		text: req.body.text,
 	};
 
 	naturalLanguageUnderstanding
 		.analyze(analyzeParams)
 		.then((analysisResults) => {
 			res.send(
-				JSON.stringify(analysisResults.result.concepts[0].text, null, 2)
+				JSON.stringify(
+					analysisResults.result.categories[0].label.split("/")[1],
+					null,
+					2
+				)
 			);
 		})
 		.catch((err) => {
-			res.send(err);
+			console.log("error:", err);
 		});
 });
 
