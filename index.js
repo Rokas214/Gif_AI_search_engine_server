@@ -9,15 +9,13 @@ const { port } = require("./src/config");
 const auth = require("./src/routes/v1/auth");
 const home = require("./src/routes/v1/home");
 const gifHistory = require("./src/routes/v1/gifHistory");
-const watson = require("./src/routes/v1/watson");
-const watsonv2 = require("./src/routes/v1/watsonv2");
-const watsonv3 = require("./src/routes/v1/watsonv3");
+const watsonUrlReader = require("./src/routes/v1/watsonUrlReader");
+const watsonTextReader = require("./src/routes/v1/watsonTextReader");
 
 app.use("/auth", auth);
 app.use("/", home);
 app.use("/gifhistory", gifHistory);
-app.use("/watson", watson);
-app.use("/watsonv2", watsonv2);
-app.use("/watsonv3", watsonv3);
+app.use("/watson-url", watsonUrlReader);
+app.use("/watson-text", watsonTextReader);
 
 app.listen(port, () => console.log("it's working"));
