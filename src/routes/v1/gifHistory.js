@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
 		const con = await mysql.createConnection(dbConfig);
 		const [data] = await con.execute(`
 	        INSERT INTO gif_history (url,email)
-	        VALUES ('${input.url}', '${req.headers.email}')
+	        VALUES ('${input.url}', '${req.body.email}')
 	        `);
 		await con.end();
 		return res.send(data);
