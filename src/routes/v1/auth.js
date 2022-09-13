@@ -33,8 +33,8 @@ router.post("/register", async (req, res) => {
 	try {
 		const con = await mysql.createConnection(dbConfig);
 		const [data] = await con.execute(`
-        SELECT * FROM users WHERE email = ${mysql.escape(req.body.email)} 
-        `);
+		  SELECT * FROM users WHERE email = ${mysql.escape(req.body.email)} 
+		  `);
 
 		await con.end();
 		if (data.length > 0) {
@@ -46,9 +46,9 @@ router.post("/register", async (req, res) => {
 	try {
 		const con = await mysql.createConnection(dbConfig);
 		const [data] = await con.execute(`
-		insert into users (email,password)
-		values (${mysql.escape(userInputs.email)},'${cryptedPassword}')
-		`);
+		  insert into users (email,password)
+		  values (${mysql.escape(userInputs.email)},'${cryptedPassword}')
+		  `);
 
 		await con.end();
 		return res.send(data);
