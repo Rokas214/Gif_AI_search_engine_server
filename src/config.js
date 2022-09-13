@@ -2,12 +2,12 @@ require("dotenv").config();
 
 module.exports = {
 	port: process.env.PORT || 3000,
-	jwt_secret: process.env.JWT_SECRET,
+	jwt_secret: rokas123,
 	dbConfig: {
-		host: process.env.HOST,
-		user: process.env.USER,
-		password: process.env.PASSWORD,
-		port: process.env.DB_PORT,
-		database: process.env.DATABASE,
+		host: sql11.freemysqlhosting.net,
+		user: sql11518356,
+		password: YSxfC1asJA,
+		port: 3306,
+		database: sql11518356,
 	},
 };
