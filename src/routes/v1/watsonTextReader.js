@@ -2,14 +2,14 @@ const express = require("express");
 const router = express.Router();
 const NaturalLanguageUnderstandingV1 = require("ibm-watson/natural-language-understanding/v1");
 const { IamAuthenticator } = require("ibm-watson/auth");
+const { api_key, service_url } = require("../../config");
 
 const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
 	version: "2022-04-07",
 	authenticator: new IamAuthenticator({
-		apikey: "vwPLAEce1W7w7vYEzXbqlf-Mge_loZE9Yf7pDZlpDKoB",
+		apikey: api_key,
 	}),
-	serviceUrl:
-		"https://api.eu-de.natural-language-understanding.watson.cloud.ibm.com/instances/6c94ff95-22cc-4c85-bfb7-d6f55e1f3522",
+	serviceUrl: service_url,
 });
 
 router.post("/", async (req, res) => {
@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
 			);
 		})
 		.catch((err) => {
-			console.log("error:", err);
+			return res.send("error:", err);
 		});
 });
 
