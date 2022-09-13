@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 const auth = require("./src/routes/v1/auth");
 const home = require("./src/routes/v1/home");
 const gifHistory = require("./src/routes/v1/gifHistory");
