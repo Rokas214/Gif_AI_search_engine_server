@@ -1,4 +1,5 @@
 App description:
+
 This is search engine app, that searches for most relevant gif. Using IBM AI Watson technology, it can scan throughout websites, articles, phrases, words and return most relevant gif from https://giphy.com/. It also displays 5 last gif of specific user.
 
 Live demo: https://master.d1p4lagf8uxgt4.amplifyapp.com/ (deployed on AWS cloud)
@@ -12,13 +13,13 @@ Client side is built with React.
 
 Server side is built with Node, Express and MySQL on https://freemysqlhosting.net/
 
-Development
-You can clone this app by copying this code in to your terminal:
+Development: You can clone this app by copying this code in to your terminal:
 
 'git clone https://github.com/Rokas214/Service my-app'
 Install all necessary packages:
 
 'npm install'
+
 Database connected on https://freemysqlhosting.net/ but you can do it on your own machine or cloud platform of your choise (AWS, Azure, IBM Cloud)
 
 To create your database table run this sql script:
