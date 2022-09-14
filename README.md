@@ -2,7 +2,7 @@ App description:
 
 This is search engine app, that searches for most relevant gif. Using IBM AI Watson technology, it can scan throughout websites, articles, phrases, words and return most relevant gif from https://giphy.com/. It also displays 5 last gif of specific user.
 
-Live demo: https://master.d1p4lagf8uxgt4.amplifyapp.com/ (deployed on AWS cloud)
+Live demo: https://master.ddhgbk9pm1vsb.amplifyapp.com/ (deployed on AWS cloud)
 
 Additional resources:
 
